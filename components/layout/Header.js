@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import Link from 'components/common/Link';
-import Icon from 'components/common/Icon';
+// import Icon from 'components/common/Icon';
 import LanguageButton from 'components/settings/LanguageButton';
 import ThemeButton from 'components/settings/ThemeButton';
 import HamburgerButton from 'components/common/HamburgerButton';
 import UpdateNotice from 'components/common/UpdateNotice';
 import UserButton from 'components/settings/UserButton';
-import Logo from 'assets/logo.svg';
+// import Logo from 'assets/logo.svg';
 import styles from './Header.module.css';
 import useUser from 'hooks/useUser';
 import { HOMEPAGE_URL } from 'lib/constants';
@@ -22,8 +22,8 @@ export default function Header() {
       {user?.is_admin && <UpdateNotice />}
       <header className={classNames(styles.header, 'row')}>
         <div className={styles.title}>
-          <Icon icon={<Logo />} size="large" className={styles.logo} />
-          <Link href={pathname.includes('/share') ? HOMEPAGE_URL : '/'}>umami</Link>
+          {/* <Icon icon={<Logo />} size="large" className={styles.logo} /> */}
+          <Link href={pathname.includes('/share') ? HOMEPAGE_URL : '/'}>Site Analyze</Link>
         </div>
         <HamburgerButton />
         {user && (
